@@ -1,0 +1,45 @@
+:root{
+    --base-clr: rgb(85, 2, 23);
+    --hover-clr: rgba(0, 0, 0, 0.8);
+    --text-clr: rgb(248, 180, 197);
+    --accent-clr: rgb(141, 34, 52);
+    --base-padding: 2rem;
+}
+
+body{
+    background-color: var(--base-clr);
+    padding: var(--base-padding);
+}
+
+h1{
+    color: var(--text-clr);
+    font-size: 10vw;
+    /* unidade px (pixels) */
+
+    /*font-size: 1rem;
+     unidade rem = 16px */
+
+    /*font-size: 1em;
+     unidade em = relativa -> acompanha o tamanho da fonte do body, por exemplo, 2em é o dobro do tamanho do body */
+}
+
+/* unidades vw(view width) e vh (view height) */
+.container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--accent-clr);
+    height: 50vh;
+    width: 100vw;
+    /* width: 100%; independente do tamanho da tela, a largura vai ocupar toda a extensão dela*/
+    font-size: 5vh;
+    /* 5vh = 5% da altura (height) -> o texto muda de tamanho de acordo com a largura da tela */
+
+    /*
+    vw e vh 'invertidos' -> o tamanho da altura mudaria de acordo com o tamanho da largura
+    height: 100vw;
+    width: 100vh;
+    */
+    
+    margin: 0 auto;
+}
