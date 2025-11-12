@@ -17,6 +17,7 @@ body{
 }
 
 .grid_container{
+    transition: 1s ease-in-out;
     justify-self: center;
     justify-content: center;
     margin: 5vw;

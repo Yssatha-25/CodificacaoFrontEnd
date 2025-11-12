@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(147, 145, 252);
+    color: rgb(19, 18, 87);
+}
+
+.container_imagens{
+    width: 80vw;
+    margin: auto 0;
+    display: grid;
+    gap: 1rem;
+    grid-auto-columns: minmax(5rem 1fr);
+    grid-template-rows: 200px;
+    grid-template-areas: 
+    "a1 a1 a2"
+    "a3 a4 a2"
+    "a3 a5 a5"
+    ;
+}
+
+.card{
+    background-color: rgb(2, 1, 95);
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.card img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
