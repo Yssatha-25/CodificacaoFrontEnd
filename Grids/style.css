@@ -1,6 +1,12 @@
 body{
     background-color: rgb(88, 1, 37);
     color: rgb(255, 176, 189);
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+#titulo2, #titulo3{
+    display: none;
 }
 
 /* ATIVIDADE 2 */
@@ -8,16 +14,87 @@ body{
     background-color: rgb(119, 1, 50);
     border: 2px solid rgb(255, 176, 189);
     border-radius: 4px;
-    height: 40vh;
 }
 
 .grid_container{
-    display: grid;
-    height: 30rem;
-    grid-template-columns: 10vh 30vh;
-    gap: 2vw;
+    justify-self: center;
     justify-content: center;
-    align-content: center;
+    margin: 5vw;
+    display: grid;
+    gap: 1vw;
+    width: 100%;
+    grid-auto-columns: 20vw;
+    grid-auto-rows: 20vh;
+    grid-template-areas: 
+    "item1 item2 item2 item3"
+    "item1 item4 item5 item5"
+    ;
+}
+.item1{
+    grid-area: item1;
+}
+.item2{
+    grid-area: item2;
+}
+.item3{
+    grid-area: item3;
+}
+.item4{
+    grid-area: item4;
+}
+.item5{
+    grid-area: item5;
+}
+
+@media (max-width: 1500px){
+    .grid_container{
+        grid-template-areas: 
+        "item1 item1 item2"
+        "item1 item1 item3"
+        "item4 item5 item5"
+        ;
+    }
+    #titulo1, #titulo3{
+        display: none;
+    }
+    #titulo2{
+        display: block;
+    }
+    body{
+        background-color: rgb(25, 1, 70);
+        color: rgb(162, 114, 250);
+    }
+    
+    .item{
+        background-color: rgb(44, 2, 122);
+        border: 2px solid rgb(162, 114, 250);
+    }
+}
+
+@media (max-width: 800px){
+    .grid_container{
+        grid-template-areas: 
+        "item1 item2"
+        "item3 item2"
+        "item3 item5"
+        "item4 item5"
+        ;
+    }
+    #titulo1, #titulo2{
+        display: none;
+    }
+    #titulo3{
+        display: block;
+    }
+    body{
+        background-color: rgb(13, 31, 1);
+        color: rgb(193, 253, 153);
+    }
+    
+    .item{
+        background-color: rgb(24, 58, 1);
+        border: 2px solid rgb(193, 253, 153);
+    }
 }
 
 
